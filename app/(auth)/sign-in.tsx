@@ -1,5 +1,6 @@
 import CustomButton from "@/components/custom-button";
 import CustomInput from "@/components/custom-input";
+import { signIn } from "@/lib/appwrite";
 import { Link, router } from "expo-router";
 import { useState } from "react";
 import { Alert, Text, View } from "react-native";
@@ -22,6 +23,7 @@ const SignIn = () => {
     setIsSubmitting(true);
 
     try {
+      await signIn({ email, password });
       router.replace("/");
     } catch (error: any) {
       Alert.alert("Error", error.message);
@@ -48,7 +50,7 @@ const SignIn = () => {
         label="Password"
         secureTextEntry={true}
       />
-      <CustomButton title="Sign In" isLoading={isSubmitting} onPress={submit} />
+      <CustomButton title="Sign in" isLoading={isSubmitting} onPress={submit} />
 
       <View className="flex-center flex-row gap-2">
         <Text className="base-regular text-gray-100">
