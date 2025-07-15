@@ -13,7 +13,12 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   platform: "com.underprotection.fooddeliveryapp",
   databaseId: "68748fec00068571e060",
+  bucketId: "687618480028f914cfdb",
   userCollectionId: "6874900f0033ff388752",
+  categoryCollectionId: "687613fb00213c761c6b",
+  menuCollectionId: "6876149000279fa838d1",
+  customizationsCollectionId: "68761641003561209509",
+  menuCustomizationsCollectionId: "6876176b0015e80c533b",
 };
 
 export const client = new Client();
