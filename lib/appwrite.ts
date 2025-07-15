@@ -6,6 +6,7 @@ import {
   Databases,
   ID,
   Query,
+  Storage,
 } from "react-native-appwrite";
 
 export const appwriteConfig = {
@@ -15,8 +16,8 @@ export const appwriteConfig = {
   databaseId: "68748fec00068571e060",
   bucketId: "687618480028f914cfdb",
   userCollectionId: "6874900f0033ff388752",
-  categoryCollectionId: "687613fb00213c761c6b",
-  menuCollectionId: "6876149000279fa838d1",
+  categoriesCollectionId: "687613fb00213c761c6b",
+  menuCollectionId: "687621500027811b5180",
   customizationsCollectionId: "68761641003561209509",
   menuCustomizationsCollectionId: "6876176b0015e80c533b",
 };
@@ -30,6 +31,7 @@ client
 
 export const account = new Account(client);
 export const databases = new Databases(client);
+export const storage = new Storage(client);
 const avatars = new Avatars(client);
 
 export const createUser = async ({
